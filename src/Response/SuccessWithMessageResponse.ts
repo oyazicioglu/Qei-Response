@@ -1,8 +1,8 @@
 import { ValuableObject } from '../Lib/ValuableObject';
 import { BaseResponse } from './Base/BaseResponse';
-import { ResponseWithMessageValueObject } from './ResponseWithMessageValueObject';
+import { SuccessWithMessageResponseValueObject } from './SuccessWithMessageResponseValueObject';
 
-export class ResponseWithMessage<T> extends BaseResponse<T> implements ValuableObject<ResponseWithMessageValueObject<T>> {
+export class SuccessWithMessageResponse<T> extends BaseResponse<T> implements ValuableObject<SuccessWithMessageResponseValueObject<T>> {
     private _message: string;
     public get Message(): string {
         return this._message;
@@ -16,7 +16,7 @@ export class ResponseWithMessage<T> extends BaseResponse<T> implements ValuableO
         this._message = message;
     }
 
-    ToValueObject(): ResponseWithMessageValueObject<T> {
+    ToValueObject(): SuccessWithMessageResponseValueObject<T> {
         return {
             Data: this.Data,
             Error: this.Error?.ToValueObject(),
