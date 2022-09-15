@@ -1,3 +1,4 @@
+export { ResponseWithMessage } from './Response/ResponseWithMessage';
 export { EmptyError } from './Error/EmptyError';
 export { MaxLengthError } from './Error/MaxLengthError';
 export { MinLengthError } from './Error/MinLengthError';
