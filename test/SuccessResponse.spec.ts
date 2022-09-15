@@ -1,4 +1,4 @@
-import { SuccessResponse } from '../src/Response/Base/SuccessResponse';
+import { SuccessResponse } from '../src/Response/SuccessResponse';
 
 interface IUser {
     Name: string;

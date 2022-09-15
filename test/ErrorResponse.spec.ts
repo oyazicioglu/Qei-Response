@@ -1,6 +1,6 @@
 import { BaseError } from '../src/Error/Base/BaseError';
 import { ErrorType } from '../src/Error/Base/ErrorType';
-import { ErrorResponse } from '../src/Response/Base/ErrorResponse';
+import { ErrorResponse } from '../src/Response/ErrorResponse';
 
 describe('SuccessResponse class', () => {
     const errorResponse = new ErrorResponse(new BaseError(200, 'Message', ErrorType.WARNING));
