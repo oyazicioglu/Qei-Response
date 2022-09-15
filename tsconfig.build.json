@@ -1,6 +1,5 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "./tsconfig.json"
     // 👇️ this may vary depending on how you
     // name your test files
-    "exclude": ["test/**/*.spec.ts", "test/**/*.test.ts", "./jest.config.js"]
 }

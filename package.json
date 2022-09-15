@@ -2,8 +2,10 @@
     "name": "data-table-ts",
     "version": "1.0.0",
     "description": "",
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
     "scripts": {
-        "build": "tsc --project tsconfig.build.json",
+        "build": "rimraf ./build && tsc",
         "dev": "nodemon",
         "test": "jest",
         "test:watch": "jest --watchAll",
