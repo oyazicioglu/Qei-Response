@@ -1,4 +1,4 @@
-export { SuccessWithMessageResponse as ResponseWithMessage } from './Response/SuccessWithMessageResponse';
+export { SuccessWithMessageResponse } from './Response/SuccessWithMessageResponse';
 export { EmptyError } from './Error/EmptyError';
 export { MaxLengthError } from './Error/MaxLengthError';
 export { MinLengthError } from './Error/MinLengthError';
