@@ -1,8 +1,6 @@
-import { BaseError } from '../../Error/Base/BaseError';
-import { ValuableObject } from '../../Lib/ValuableObject';
-import { ResponseValueObject } from './ResponseValueObject';
+import { BaseError } from './BaseError';
 
-export class BaseResponse<T> implements ValuableObject<ResponseValueObject<T>> {
+export class BaseResponse<T> {
     private _data: T | undefined;
     public get Data(): T | undefined {
         return this._data;
@@ -22,12 +20,5 @@ export class BaseResponse<T> implements ValuableObject<ResponseValueObject<T>> {
     constructor(data?: T, error?: BaseError) {
         this._data = data;
         this._error = error;
-    }
-
-    ToValueObject(): ResponseValueObject<T> {
-        return {
-            Data: this.Data,
-            Error: this.Error?.ToValueObject(),
-        };
     }
 }

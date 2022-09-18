@@ -1,8 +1,7 @@
-import { ValuableObject } from '../../Lib/ValuableObject';
-import { ErrorType } from './ErrorType';
-import { ErrorValueObject } from './ErrorValueObject';
+import { BaseErrorObject } from './BaseErrorObject';
+import { IValueObject } from './IValueObject';
 
-export class BaseError implements ValuableObject<ErrorValueObject> {
+export class BaseError implements IValueObject<BaseErrorObject> {
     private _errorNumber: number;
     public get ErrorNumber(): number {
         return this._errorNumber;
@@ -33,11 +32,17 @@ export class BaseError implements ValuableObject<ErrorValueObject> {
         this._type = type;
     }
 
-    ToValueObject(): ErrorValueObject {
+    ToValueObject(): BaseErrorObject {
         return {
+            ErrorNumber: this.ErrorNumber,
             Message: this.Message,
-            Number: this.ErrorNumber,
-            Type: this.Type,
+            ErrorType: this.Type,
         };
     }
+}
+
+export enum ErrorType {
+    DANGER,
+    INFO,
+    WARNING,
 }
