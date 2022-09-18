@@ -1,4 +1,4 @@
-export { BaseError, ErrorType } from './BaseError';
-export { BaseErrorObject } from './BaseErrorObject';
-export { BaseResponse } from './BaseResponse';
-export { IValueObject } from './IValueObject';
+export { BaseError, ErrorType } from './src/BaseError';
+export { BaseErrorObject } from './src/BaseErrorObject';
+export { BaseResponse } from './src/BaseResponse';
+export { IValueObject } from './src/IValueObject';
